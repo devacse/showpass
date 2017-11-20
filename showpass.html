@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    html{
+      padding: 3%;
+      background: #fff;
+    }
+    body{
+      padding: 8%;
+      width: 500px;
+      border-radius: 0%;
+      background: white;
+    }
+    ul#passCount{
+      list-style-position: inside;
+      padding-left: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+  <script src="jquery.js"></script>
+  <script src="showpass.js"></script>
+
+  <div class="mainDiv text-center">
+    <h2>ShowPass</h2>
+    <hr>
+
+      <ul id="passCount" style="display:none;">
+
+      </ul>
+
+      <div class="col-lg-12 text-center">
+            <button type="button" class="btn btn-primary" id="viewPassBtn" >View Passwords</button>
+
+            <button type="button" class="btn btn-success" id="showPassBtn">Show Passwords</button>
+      </div>
+    </div>
+</body>
+</html>
