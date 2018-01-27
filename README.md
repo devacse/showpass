@@ -13,5 +13,5 @@ This extension is unpacked and still in development.
 # todo
 
 - [x] Create an extenstion first.
-- [ ] Input type not matching to password on content js. Null values get returned. Not working as expected. Fix it.
+- [x] Input type not matching to password on content js. Null values get returned. Not working as expected. Fix it.
 - [ ] Code Refactor.
