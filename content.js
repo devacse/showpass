@@ -18,7 +18,9 @@
 
     function showPasswords(){
       for(var i = 0; i < inputs.length; i++) {
-        inputs[i].type = 'text';
+        if(inputs[i].type.toLowerCase() == 'password') {
+          inputs[i].type = 'text';
+        }        
       }
     }
 
