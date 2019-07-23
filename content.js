@@ -42,7 +42,6 @@
       var index = this.getAttribute('data-id');
       var action = this.getAttribute('data-action');
       var pass = passwords[index];
-      console.log(action);
       if(passwords[index]){
         if(action === '1'){          
           passwords[index].type = 'text';
@@ -53,32 +52,24 @@
           this.text = "Show Password";          
           this.setAttribute('data-action', 1);
         } else if(action=='copy'){
-          navigator.permissions.query({name: "clipboard-write"}).then(result => {
-            if (result.state == "granted" || result.state == "prompt") {
-              /* write to the clipboard now */
-              console.log('HRANDER');
-            }
-          });
-          range = document.createRange();
-          range.selectNodeContents(passwords[index]);
-          
-          // this.select();
-          document.execCommand("copy");
+          if(pass.value==""){
+            return;
+          }
+          pass.select();
+          if(pass.type=='password'){
+            pass.type='text';
+            var copied  = document.execCommand("copy");
+            pass.type='password';
+          } else {
+            var copied  = document.execCommand("copy");
+          }
+          if(copied){
+            this.text=' | Copied';
+          }
         }
         
       }
     }
-
-    // chrome.permissions.request({
-    //   permissions: ['clipboardWrite'],
-    // }, function(granted) {
-    //   // The callback argument will be true if the user granted the permissions.
-    //   if (granted) {
-    //     console.log("Permission granted");
-    //   } else {
-    //     console.log("Permission not granted");
-    //   }
-    // });
 
     function showPasswords(){
       for(var i = 0; i < passwords.length; i++) {
