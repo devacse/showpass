@@ -14,4 +14,7 @@ This extension is unpacked and still in development.
 
 - [x] Create an extenstion first.
 - [x] Input type not matching to password on content js. Null values get returned. Not working as expected. Fix it.
-- [ ] Code Refactor.
+- [x] Code Refactor.
+- [x] Add Show password | Copy password links below password field.
+- [ ] Remove Popup.
+- [ ] Make it work with angular, react ...
