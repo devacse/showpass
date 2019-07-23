@@ -7,8 +7,8 @@ This extension is still in development.
 ###### To Install
 
 1. Clone the repo
-1. Make sure Developer mode is checked in chrome extension page.
-1. Select the extension folder by Opening Load Unpacked exteion
+2. Make sure Developer mode is checked in chrome extension page.
+3. Load the upacked extension
 
 # todo
 
